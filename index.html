@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagarmatha Assets | Private Investment Office</title>
+    <meta name="description" content="Sagarmatha Assets is a private investment company managing proprietary capital.">
+    
+    <!-- PRIVACY: Tell Search Engines NOT to index this site -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* * SAGARMATHA ASSETS BRAND GUIDE v1.0 
+         * CSS Variable Definition
+         */
+        :root {
+            /* Core Palette */
+            --color-primary: #264653;   /* Sagarmatha Teal */
+            --color-accent: #C7A252;    /* Summit Gold */
+            --color-neutral: #A8A8B8;   /* Granite Grey */
+            
+            /* Theme: Light (Snow Peak White) - Default */
+            --color-background: #FFFFFF;
+            --color-surface: #F5F5F5;
+            --color-text: #333333;
+            --color-text-secondary: #666666;
+            --color-border: #EBEBEB;
+        }
+
+        /* Basic Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Body Text */
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* * HEADER 
+         * Background: Sagarmatha Teal (Absolute Security)
+         */
+        header {
+            background-color: var(--color-primary);
+            padding: 1rem 2rem; /* Reduced padding slightly since we have main logo */
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #FFFFFF; /* High contrast on Teal */
+            text-decoration: none;
+        }
+
+        /* Header Icon (Small) */
+        .header-icon {
+            height: 32px;
+            width: 32px;
+            fill: var(--color-accent); /* Gold Mountain */
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+        }
+
+        /* * MAIN CONTENT 
+         * High White Space
+         */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* The Main Central Logo */
+        .main-logo-img {
+            max-width: 180px;  /* Size control */
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+
+        .gold-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+            margin: 0 auto 2rem auto;
+        }
+
+        p.lead {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            font-weight: 300;
+            max-width: 650px;
+            margin-bottom: 4rem;
+        }
+
+        /* * DETAILS GRID 
+         * Clean, Minimalist Data Views
+         */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        .detail-card {
+            background-color: var(--color-surface); /* Off-White Panel */
+            padding: 2rem;
+            border-left: 3px solid var(--color-accent); /* Gold Accent Border */
+            border-radius: 0 4px 4px 0;
+        }
+
+        .detail-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .detail-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-card a {
+            color: var(--color-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent);
+            transition: opacity 0.2s;
+        }
+        
+        .detail-card a:hover {
+            opacity: 0.7;
+        }
+
+        /* * FOOTER & COMPLIANCE 
+         */
+        footer {
+            background-color: #F8F9FA;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .regulatory-box {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: var(--color-neutral);
+            border: 1px solid var(--color-border);
+            padding: 1.5rem;
+            background-color: #FFFFFF;
+        }
+
+        .regulatory-box strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: var(--color-neutral);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem; }
+            .brand-name { display: none; } /* Show only Icon on mobile */
+            header { justify-content: center; }
+            main { padding: 3rem 1.5rem; }
+            .main-logo-img { max-width: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Primary Navigation -->
+    <header>
+        <a href="#" class="brand-container">
+            <!-- Inline SVG Icon for Header (Kept for navigation context) -->
+            <svg class="header-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 15 L90 85 H10 L50 15 Z" fill="currentColor"/>
+                <path d="M50 15 L75 85 H25 L50 15 Z" fill="#FFFFFF" fill-opacity="0.2"/>
+            </svg>
+            <span class="brand-name">Sagarmatha Assets</span>
+        </a>
+    </header>
+
+    <main>
+        <!-- MAIN CENTRAL LOGO: Renamed your file to 'logo.png' -->
+        <img src="logo.png" alt="Sagarmatha Assets Official Logo" class="main-logo-img">
+
+        <h1>Private Investment Office</h1>
+        <div class="gold-divider"></div>
+        <p class="lead">
+            A single-family proprietary trading vehicle dedicated to the management and preservation of shareholder capital.
+        </p>
+
+        <div class="details-grid">
+            <div class="detail-card">
+                <h3>Registered Entity</h3>
+                <p>Sagarmatha Assets Limited</p>
+                <p>Incorporated in Ireland</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>Contact</h3>
+                <p>27 Abbot Drive</p>
+                <p>Cualanor, Dun Laoghaire</p>
+                <p>Co. Dublin, Ireland</p>
+                <p style="margin-top: 0.5rem;"><a href="mailto:admin@sagarmatha.co">admin@sagarmatha.co</a></p>
+            </div>
+
+            <div class="detail-card">
+                <h3>Mandate</h3>
+                <p>Proprietary Capital Management</p>
+                <p>Private Equity & Derivatives</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="regulatory-box">
+            <strong>REGULATORY NOTICE</strong>
+            Sagarmatha Assets is a private investment company investing solely its own proprietary funds. 
+            We do not accept external capital, we do not have retail clients, and we do not provide investment services to the public. 
+            This website is for corporate information purposes only.
+        </div>
+        <div class="copyright">
+            &copy; 2026 Sagarmatha Assets. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
